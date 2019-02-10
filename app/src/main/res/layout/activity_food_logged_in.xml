@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".FoodActivityLoggedIn">
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:background="#838b8b8b"
+        android:fontFamily="monospace"
+        android:text="LogOut"
+        android:textColor="#FFFF"
+        android:textSize="17sp" />
+    <!--
+
+        <fragment
+            android:id="@+id/fragment"
+            android:name="com.example.dell.rozkhana01.OrderFragment"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            android:layout_height="wrap_content" />
+    -->
+
+    <Button
+        android:id="@+id/rating_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/ratingbtn"
+        android:animateLayoutChanges="true"
+        android:drawableTop="@drawable/ic_action_star"
+        android:fontFamily="monospace"
+        android:padding="15dp"
+        android:text="RATE"
+        android:textColor="#ffff" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="60dp"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bookthumbnail"
+                android:layout_width="125dp"
+                android:layout_height="170dp"
+                android:background="#2d2d2d"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/txttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif"
+                android:text=" Title"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#edecec"
+                android:padding="8dp"
+                android:text=" Ingredients: " />
+
+            <TextView
+                android:id="@+id/txtIngredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/actor"
+                android:text="Ingredients"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#edecec"
+                android:padding="8dp"
+                android:text=" Description: " />
+
+            <TextView
+                android:id="@+id/txtDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/acme"
+                android:text="Description"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/store_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#edecec"
+                android:visibility="gone"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:text=" STORE: " />
+
+            <LinearLayout
+                android:id="@+id/ingredients_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/orderbackground"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_action_cart" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Please Add Ingredients Quantity in 'KG':"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="cursive"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Note: Leave blank if you don't want to buy an item:"
+                    android:textColor="#ba1616"
+                    android:textSize="20dp" />
+
+
+                <LinearLayout
+                    android:id="@+id/ing1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/et_ing_text"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:id="@+id/ing1_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Ing1"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/ing1_et"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Quantity Kg" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ing2_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/et_ing_text"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:id="@+id/ing2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Ing1"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/ing2_et"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Quantity Kg" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ing3_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/et_ing_text"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:id="@+id/ing3_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Ing1"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/ing3_et"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Quantity Kg" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ing4_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/et_ing_text"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:id="@+id/ing4_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Ing1"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/ing4_et"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Quantity Kg" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ing5_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/et_ing_text"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:id="@+id/ing5_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Ing1"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/ing5_et"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Quantity Kg" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/add_item_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@drawable/ic_action_plus"
+                    android:text="Add more items, at most 5!"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ing1_hidden_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/et_ing_text"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:weightSum="2.0">
+
+                    <EditText
+                        android:id="@+id/ing1_name_hidden_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Ingredient Name"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/ing1_quantity_hidden_et"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Quantity Kg" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ing2_hidden_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/et_ing_text"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:weightSum="2.0">
+
+                    <EditText
+                        android:id="@+id/ing2_name_hidden_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Ingredient Name"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/ing2_quantity_hidden_et"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Quantity Kg" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ing3_hidden_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/et_ing_text"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:weightSum="2.0">
+
+                    <EditText
+                        android:id="@+id/ing3_name_hidden_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Ingredient Name"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/ing3_quantity_hidden_et"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Quantity Kg" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ing4_hidden_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/et_ing_text"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:weightSum="2.0">
+
+                    <EditText
+                        android:id="@+id/ing4_name_hidden_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Ingredient Name"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/ing4_quantity_hidden_et"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Quantity Kg" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ing5_hidden_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/et_ing_text"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:weightSum="2.0">
+
+                    <EditText
+                        android:id="@+id/ing5_name_hidden_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Ingredient Name"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/ing5_quantity_hidden_et"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Quantity Kg" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/place_order_final_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/buttonshape_place_order"
+                    android:gravity="center"
+                    android:text="PLACE ORDER"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/order_final_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="serif-monospace"
+        android:gravity="center|bottom"
+        android:padding="20dp"
+        android:text="ORDER"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

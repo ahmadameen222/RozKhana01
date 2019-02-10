@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Hallfinder">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="WELCOME TO THE STORE "
+        android:drawableRight="@drawable/ic_action_cart"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text=" Please Wait..."
+        android:textSize="15sp"
+        android:fontFamily="monospace"
+        />
+
+    <!--
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:background="#838b8b8b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFF"
+        android:layout_margin="5dp"
+        android:layout_alignParentTop="true"
+        android:text="LogOut"
+        />
+-->
+
+</LinearLayout>

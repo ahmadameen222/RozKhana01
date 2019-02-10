@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="290dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview_dishes_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/img_dish_id"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="#000000"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/dish_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="Dish Name"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/thumbsUp_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#FFFFFF"
+                android:drawableLeft="@drawable/ic_action_thumpsup"
+                android:drawableTint="#3da9ea"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text=" " />
+
+            <TextView
+                android:id="@+id/items_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="#FFFFFF"
+                android:drawableRight="@drawable/ic_action_cart"
+                android:drawableTint="#3da9ea"
+                android:padding="10dp"
+                android:text=" " />
+
+            <TextView
+                android:id="@+id/dish_tu_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/items_tv"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="cursive"
+                android:gravity="left"
+                android:paddingTop="8dp"
+                android:text="0"
+                android:textColor="#42bfe9"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/dish_cat_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/items_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Dish Category"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

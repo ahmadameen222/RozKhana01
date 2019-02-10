@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "304251521681",
+    "firebase_url": "https://rozkhana01.firebaseio.com",
+    "project_id": "rozkhana01",
+    "storage_bucket": "rozkhana01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304251521681:android:c0b590ee2c939885",
+        "android_client_info": {
+          "package_name": "com.example.dell.rozkhana01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304251521681-fhbnsou9qdpmf2cfi18e7250hvk4ao27.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dell.rozkhana01",
+            "certificate_hash": "fb415fdeb018f8181f95d09ce29dc71cdb95d5bc"
+          }
+        },
+        {
+          "client_id": "304251521681-h2el67map051veopee8btsaaqog0ei1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJDidemj9dpN8d9zsWDFpYEqHFU2YK1W0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304251521681-h2el67map051veopee8btsaaqog0ei1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
