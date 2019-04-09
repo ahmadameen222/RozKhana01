@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,12 +30,19 @@
         <activity android:name=".Hallfinder" />
         <activity android:name=".FoodActivityLoggedIn" />
 
+        <service
+            android:name=".FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".FirebaseAuthenticationActivity" />
-        <activity android:name=".VerifyMobile"></activity>
+        <activity android:name=".VerifyMobile"/>
     </application>
 
 </manifest>

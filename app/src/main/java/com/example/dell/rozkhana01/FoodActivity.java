@@ -21,7 +21,6 @@ public class FoodActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
 
-
         tvtitle = (TextView) findViewById(R.id.txttitle);
         tvdescription = (TextView) findViewById(R.id.txtDesc);
         tvIng = (TextView) findViewById(R.id.txtIngredients);
@@ -54,14 +53,18 @@ public class FoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-/*
-                Intent intent = new Intent(FoodActivity.this, FirebaseAuthenticationActivity.class);
-                startActivity(intent);
-*/
+
+               // Intent intent = new Intent(FoodActivity.this, FirebaseAuthenticationActivity.class);
+               // startActivity(intent);
+
                 Intent intent = new Intent(FoodActivity.this, FirebaseActivity.class);
+                //Intent intent = new Intent(FoodActivity.this, FoodActivityLoggedIn.class);
                 startActivity(intent);
             }
         });
-
     }
 }
+
+
+
+

@@ -59,7 +59,7 @@ public class FoodActivityLoggedIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_logged_in);
 
-//        Firebase ref = new Firebase(Config.FIREBASE_URL);
+        //Firebase ref = new Firebase(Config.FIREBASE_URL);
 
         //databaseReference = FirebaseDatabase.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference();

@@ -1,14 +1,31 @@
 package com.example.dell.rozkhana01;
 
+import android.content.SharedPreferences;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
+
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.Query;
+import com.firebase.client.ValueEventListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
     private List<Food> foodList;
     private RecyclerView recyclerView;
     private RecyclerViewAdapter adapter;
+    private Firebase firebase;
+    private DatabaseReference databaseReference;
+    private ListView listView;
+    ArrayList foodArrayList = new ArrayList();
+    String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +52,18 @@ public class MainActivity extends AppCompatActivity {
 
         flipperLayout = (FlipperLayout) findViewById(R.id.flipper);
         setLayout();
-
         flipperLayout.setVisibility(View.VISIBLE);
+
+        //firebase = new Firebase("https://rozkhana01.firebaseio.com/");
+        //databaseReference = FirebaseDatabase.getInstance().getReference("Foods");
+
+        /*Foods artist = new Foods(id, name, genre);
+        databaseReference.child(id).setValue(artist);
+        */
+
+       // databaseReference = FirebaseDatabase.getInstance().getReference().child("Foods").child("1");
+
+        final ArrayList arrayList = new ArrayList();
 
         foodList = new ArrayList<>();
         foodList.add(new Food("Chinese Foods", "Description book", R.drawable.thevigitarian));
@@ -40,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         foodList.add(new Food("Chicken Dishes", "Description book", R.drawable.themartian));
         foodList.add(new Food("Fried Foods", "Description book", R.drawable.hediedwith));
         foodList.add(new Food("Turkish Foods", "Description book", R.drawable.thevigitarian));
-        foodList.add(new Food("Fast Food", "Description book", R.drawable.thewildrobot));
+        foodList.add(new Food("Fast Foods", "Description book", R.drawable.thewildrobot));
         foodList.add(new Food("Salads", "Description book", R.drawable.mariasemples));
         foodList.add(new Food("Diet food", "Description book", R.drawable.thevigitarian));
         foodList.add(new Food("Natural foods", "Description book", R.drawable.thewildrobot));
@@ -51,8 +83,10 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview_id);
         adapter = new RecyclerViewAdapter(this, foodList);
+        //adapter = new RecyclerViewAdapter(this, arrayList);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         recyclerView.setAdapter(adapter);
+
     }
 
     private void setLayout() {
