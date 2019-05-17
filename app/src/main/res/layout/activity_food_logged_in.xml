@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
+    android:background="#E8EAF6"
     tools:context=".FoodActivityLoggedIn">
 
     <Button
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_margin="5dp"
-        android:background="#838b8b8b"
+        android:background="#7986CB"
         android:fontFamily="monospace"
         android:text="LogOut"
         android:textColor="#FFFF"
@@ -33,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="17dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="90dp"
         android:background="@drawable/ratingbtn"
         android:animateLayoutChanges="true"
@@ -66,6 +67,7 @@
                 android:scaleType="centerCrop" />
 
             <TextView
+                android:textColor="#283593"
                 android:id="@+id/txttitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -77,15 +79,17 @@
 
             <TextView
                 android:id="@+id/txtCat"
+                android:textColor="#283593"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:background="#edecec"
+                android:background="#C5CAE9"
                 android:padding="8dp"
                 android:text=" Ingredients: " />
 
             <TextView
                 android:id="@+id/txtIngredients"
+                android:textColor="#283593"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -99,7 +103,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:background="#edecec"
+                android:background="#C5CAE9"
+                android:textColor="#283593"
                 android:padding="8dp"
                 android:text=" Description: " />
 
@@ -108,8 +113,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/acme"
+                android:fontFamily="@font/actor"
                 android:text="Description"
+                android:textColor="#283593"
                 android:textSize="20sp" />
 
             <TextView
@@ -543,6 +549,8 @@
         android:gravity="center|bottom"
         android:padding="20dp"
         android:text="ORDER"
+        android:background="#7986CB"
+        android:textColor="#ffff"
         android:textSize="20sp"
         android:textStyle="bold" />
 

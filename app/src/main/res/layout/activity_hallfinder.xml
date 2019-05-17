@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#E8EAF6"
     tools:context=".Hallfinder">
 
     <TextView
@@ -15,8 +16,9 @@
         android:padding="15dp"
         android:text="WELCOME TO THE STORE "
         android:drawableRight="@drawable/ic_action_cart"
-        android:textSize="20dp"
-        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:textColor="#3949AB"
+        android:fontFamily="@font/actor"
         android:textStyle="bold" />
 
     <TextView
@@ -25,8 +27,9 @@
         android:layout_gravity="bottom"
         android:gravity="center"
         android:text=" Please Wait..."
+        android:textColor="#3949AB"
+        android:fontFamily="@font/acme"
         android:textSize="15sp"
-        android:fontFamily="monospace"
         />
 
     <!--

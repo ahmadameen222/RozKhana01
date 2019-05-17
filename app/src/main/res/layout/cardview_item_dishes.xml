@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp">
-
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="20dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="20dp"
+    app:cardCornerRadius="20dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <android.support.v7.widget.CardView
             android:id="@+id/cardview_dishes_id"
@@ -17,8 +23,8 @@
 
             <ImageView
                 android:id="@+id/img_dish_id"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
                 android:background="#000000"
                 android:scaleType="fitXY" />
 
@@ -29,6 +35,7 @@
                 android:layout_gravity="top"
                 android:fontFamily="monospace"
                 android:gravity="center"
+                android:padding="20dp"
                 android:text="Dish Name"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
@@ -37,7 +44,9 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            >
 
             <TextView
                 android:id="@+id/thumbsUp_tv"
@@ -45,12 +54,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:drawableLeft="@drawable/ic_action_thumpsup"
                 android:drawableTint="#3da9ea"
-                android:paddingLeft="10dp"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:visibility="invisible"
+                android:paddingLeft="5dp"
                 android:text=" " />
 
             <TextView
@@ -62,8 +69,8 @@
                 android:background="#FFFFFF"
                 android:drawableRight="@drawable/ic_action_cart"
                 android:drawableTint="#3da9ea"
-                android:padding="10dp"
-                android:text=" " />
+                android:text=" "
+                android:paddingRight="5dp"/>
 
             <TextView
                 android:id="@+id/dish_tu_count_tv"
@@ -91,7 +98,6 @@
                 android:layout_gravity="center"
                 android:fontFamily="cursive"
                 android:gravity="center"
-                android:padding="5dp"
                 android:text="Dish Category"
                 android:textColor="#000000"
                 android:textSize="18sp" />

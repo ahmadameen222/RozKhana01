@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fcfcfc"
+    android:background="#E8EAF6"
     tools:context=".FoodActivity">
 
 
@@ -31,6 +31,7 @@
 
             <TextView
                 android:id="@+id/txttitle"
+                android:textColor="#5C6BC0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -41,34 +42,38 @@
 
             <TextView
                 android:id="@+id/txtCat"
+                android:textColor="#5C6BC0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:background="#edecec"
+                android:background="#C5CAE9"
                 android:padding="8dp"
                 android:text=" Ingredients: " />
 
             <TextView
                 android:id="@+id/txtDesc"
+                android:textColor="#5C6BC0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Description"
                 android:textSize="20sp"
-                android:fontFamily="@font/acme"
+                android:fontFamily="@font/actor"
                 />
 
 
             <TextView
+                android:textColor="#5C6BC0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:background="#edecec"
+                android:background="#C5CAE9"
                 android:padding="8dp"
                 android:text=" Description: " />
 
 
             <TextView
+                android:textColor="#5C6BC0"
                 android:id="@+id/txtIngredients"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -90,8 +95,10 @@
         android:layout_height="wrap_content"
         android:gravity="center|bottom"
         android:text="ORDER"
+        android:background="#7986CB"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="#ffff"
         android:fontFamily="serif-monospace"
         android:padding="20dp"
         android:layout_alignParentBottom="true"

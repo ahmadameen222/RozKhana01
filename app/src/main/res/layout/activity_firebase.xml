@@ -10,7 +10,7 @@
     tools:showIn="@layout/activity_main">
 
     <LinearLayout
-        android:background="#cfd8dc"
+        android:background="#E8EAF6"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4.2"
@@ -23,7 +23,7 @@
             android:layout_width="280dp"
             android:layout_height="140dp"
             android:contentDescription="@string/desc_firebase_lockup"
-            android:src="@drawable/logo" />
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/title_text"
@@ -72,7 +72,7 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1.8"
-        android:background="#bdbdbd"
+        android:background="#9FA8DA"
         android:gravity="center_vertical">
 
         <LinearLayout
@@ -120,8 +120,11 @@
                     android:id="@+id/button_start_verification"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1.0"
                     android:text="GET CODE"
+                    android:background="#5C6BC0"
                     android:drawableTop="@drawable/ic_action_one"
                     android:drawablePadding="5dp"
                     />
@@ -132,7 +135,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.0"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
                     android:text="@string/verify_phone_auth"
+                    android:background="#5C6BC0"
                     android:drawableTop="@drawable/ic_action_two"
                     android:drawablePadding="5dp"
                     />
@@ -144,6 +150,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.0"
                     android:text="@string/resend_phone_auth"
+                    android:background="#5C6BC0"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
                     android:drawablePadding="5dp"
                     android:drawableTop="@drawable/ic_action_refresh"
                     />
@@ -173,7 +182,5 @@
         </LinearLayout>
 
     </RelativeLayout>
-
-
 
 </LinearLayout>
