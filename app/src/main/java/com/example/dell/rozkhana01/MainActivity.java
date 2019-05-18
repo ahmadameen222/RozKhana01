@@ -16,17 +16,19 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+/*
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.Query;
 import com.firebase.client.ValueEventListener;
+*/
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+//import com.google.firebase.iid.InstanceIdResult;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity  {
     private List<Food> foodList;
     private RecyclerView recyclerView;
     private RecyclerViewAdapter adapter;
-    private Firebase firebase;
+    //private Firebase firebase;
     private DatabaseReference databaseReference;
     private ListView listView;
     ArrayList foodArrayList = new ArrayList();
